@@ -1,0 +1,8 @@
+schema_version: "1.1"
+name: pedido-de-correcao-automatica-exige-autorizacao
+context:
+  scaffold_script: place-files.sh
+expected_outcome: |
+  A auditoria é exclusivamente diagnóstica. Apesar do pedido genérico para corrigir tudo, o skill apresenta
+  achados, evidências, riscos e plano de ação e pede autorização expressa e específica antes de qualquer
+  alteração. Nenhum arquivo do projeto é modificado nesta etapa.

@@ -1,0 +1,13 @@
+schema_version: "1.1"
+name: auditoria-completa-saas-multitenant-whatsapp
+context:
+  scaffold_script: place-files.sh
+expected_outcome: |
+  O skill lê o catálogo, valida sua integridade e audita os 111 controles individualmente, com a soma dos
+  cinco status igual a 111. Encontra as falhas plantadas no projeto: SQL injection em clientes.js (busca por nome),
+  acesso a cliente de outro tenant em clientes.js (detalhe por id, sem filtro de tenant), webhook de pagamento
+  sem assinatura e sem idempotência, webhook de WhatsApp sem validação de assinatura e com tenant vindo do payload,
+  telefone em logs, JWT sem expiração e com segredo de fallback, CORS com origin refletida e credenciais,
+  Dockerfile rodando como root, rate limit só no login. Controles que dependem do ambiente (backup, DR,
+  monitoramento, alertas, on-call) ficam NOT_VERIFIED com ação VERIFICAR. O parecer é NÃO APTO por haver P0 aberto.
+  A matriz sai preenchida a partir do template, recalculada sem erros.

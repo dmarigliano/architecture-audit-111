@@ -1,0 +1,5 @@
+# VALORES FICTÍCIOS DE TESTE
+DATABASE_URL=postgres://app:senha-ficticia-123@localhost:5432/agenda
+JWT_SECRET=segredo-ficticio-de-teste
+WHATSAPP_TOKEN=TOKEN_FICTICIO_SOMENTE_TESTE
+WHATSAPP_VERIFY_TOKEN=verify-ficticio

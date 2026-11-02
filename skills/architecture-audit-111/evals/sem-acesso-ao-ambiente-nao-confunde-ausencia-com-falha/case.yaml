@@ -1,0 +1,10 @@
+schema_version: "1.1"
+name: sem-acesso-ao-ambiente-nao-confunde-ausencia-com-falha
+context:
+  scaffold_script: place-files.sh
+expected_outcome: |
+  O skill avalia somente os controles pedidos, usando o catálogo como fonte. Para o que depende de ambiente
+  produtivo (monitoramento, alertas, backup, DR, incidentes, on-call, postmortems) não conclui FAIL só porque
+  o repositório não mostra evidência: usa NOT_VERIFIED ou INDETERMINADA com ação VERIFICAR e lista o que
+  precisaria ser consultado. Migrações (ARC-081) são avaliadas pelo que existe no repositório. Declara as
+  limitações de acesso e não emite parecer de prontidão.
